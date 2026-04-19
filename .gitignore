@@ -1,0 +1,8 @@
+games_cache.json
+games_ownership.json
+games_ownership.txt
+games_owned.json
+games_libraries.json
+__pycache__/
+*.pyc
+.DS_Store
