@@ -6,6 +6,8 @@ games_libraries.json
 games_by_type.txt
 games_ratings.txt
 games_ratings_cache.json
+games_arm.txt
+games_silicon_cache.json
 __pycache__/
 *.pyc
 .DS_Store
