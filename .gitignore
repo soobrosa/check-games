@@ -3,6 +3,9 @@ games_ownership.json
 games_ownership.txt
 games_owned.json
 games_libraries.json
+games_by_type.txt
+games_ratings.txt
+games_ratings_cache.json
 __pycache__/
 *.pyc
 .DS_Store

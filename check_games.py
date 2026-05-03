@@ -42,6 +42,49 @@ GAMES = [
 
 
 ITEM_PATTERNS = [
+    ("coupon",      re.compile(r"\b(\d+%\s*off|coupon|discount)\b", re.I)),
+    ("course",      re.compile(
+        r"(\bcourses?\b|\bworkshops?\b|\bwebinars?\b|"
+        r"\bmasterclass(es)?\b|\bbootcamps?\b|\bcertifications?\b|"
+        r"\bcrash\s+course\b|\bcomplete\s+practical\s+course\b|"
+        r"\btraining\s+(course|program|kit|bootcamp)\b|"
+        r"\bbeginner'?s?\s+guide\s+to\b|\bself.taught\s+programmer\b|"
+        r"\bbites\s+of\b|\bpython\s+morsels\b|"
+        r"\b\d+\s+weeks?\s+of\b|\bexercises?\s+in\s+total\b|"
+        r"\blearn\s+to\s+code\b|\bdata\s+scientists?\b|"
+        r"\bhead\s+first\b|\bhands.on\b|\beloquent\s+javascript\b|"
+        r"\bfluent\s+python\b|\bclean\s+code\b|"
+        r"\b(with|using|in|on|for)\s+("
+        r"python|django|flask|fastapi|javascript|typescript|kotlin|"
+        r"ruby|rust|golang|scala|spark|kafka|hadoop|kubernetes|docker|"
+        r"tensorflow|pytorch|keras|pandas|numpy|react|angular|vue|svelte|"
+        r"node\.?js|express|spring|rails|laravel|wordpress|"
+        r"arduino|raspberry\s+pi|aws|azure|gcp"
+        r")\b|"
+        r"\bdata\s+(analysis|engineering|wrangling|visualization|science|structures)\b|"
+        r"\b(deep|machine|reinforcement|transfer|unsupervised|exploratory)\s+learning\b|"
+        r"\bfunctional\s+programming\b|\bcontinuous\s+(delivery|integration)\b|"
+        r"\bweb\s+(development|application|app)\b|"
+        r"\bsoftware\s+engineering\b|\bbig\s+data\b|"
+        r"\bartificial\s+intelligence\b|"
+        r"\bgenetic\s+algorithms?\b|\bsimulation\s+modeling\b|"
+        r"\bgame\s+development\s+using\b|"
+        r"\b(atmospheric|environmental)\s+monitoring\b)", re.I)),
+    ("asset",       re.compile(
+        r"(\btile\s*set\b|\btile\s*map\b|\bsprite\s*(pack|set|sheet|effects?)\b|"
+        r"\bgame\s+(art|graphics|backgrounds?|icons?|sounds?|music|sfx|sprites?)\b|"
+        r"\bbackground\s*pack\b|\bbackgrounds?\s+for\s+your\b|"
+        r"\b\d+\s+(game\s+)?backgrounds?\b|\bicon\s*pack\b|\bicons?\s*$|"
+        r"\bicons?\s+(pack|set|collection)\b|"
+        r"\btexture\s*pack\b|\btextures?\s*$|"
+        r"\bsound\s*(pack|effects?|sfx|loops?|samples?)\b|\bsfx\s+(pack|kit|library)\b|"
+        r"\bmusic\s*(pack|loops?|samples?)\b|\bloops?\s+(pack|set|library)\b|"
+        r"\bsamples?\s*(pack|library)\b|"
+        r"\bbrush(es)?\s+(pack|set)\b|\bfont\s*(pack|set)\b|\bfonts?\s+for\b|"
+        r"\b3d\s+(print\s+)?models?\b|\bcharacter\s+models?\b|\bfbx\s+models?\b|"
+        r"\basset\s*(pack|library|bundle)\b|\bgame\s*assets?\b|\bassets?\s+for\s+your\b|"
+        r"\b(level|map)\s+creator\b|\bgame\s+dev(elopment)?\s+(map|asset|tool)\b|"
+        r"\bplaceholder\s+(art|sounds?)\b|\btemplates?\s+(pack|set)\b)", re.I)),
     ("soundtrack",  re.compile(r"\b(soundtrack|ost|original score|original music|music of)\b", re.I)),
     ("dlc",         re.compile(r"\b(dlc|expansion pass|season pass|expansion pack|add-on|addon|bonus content|booster pack|character pack|map pack|skin pack|cosmetic pack|item pack|upgrade pack)\b", re.I)),
     ("comic",       re.compile(r"\b(comic|graphic novel|issue\s*#?\d+)\b", re.I)),
@@ -51,7 +94,6 @@ ITEM_PATTERNS = [
     ("video",       re.compile(r"\b(movie|film|documentary|video series|making of)\b", re.I)),
     ("wallpaper",   re.compile(r"\b(wallpaper|avatar|profile|badge|emoticon|trading card)\b", re.I)),
     ("software",    re.compile(r"\b(rpg maker|game maker|editor|sdk|toolkit|engine)\b", re.I)),
-    ("coupon",      re.compile(r"\b(\d+%\s*off|coupon|discount)\b", re.I)),
 ]
 
 
